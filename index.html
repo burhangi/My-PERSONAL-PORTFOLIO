@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <title>Burhan Portfolio</title>
+  <style>
+    navbar-brand {
+      /* font-size:50px; */
+      /* font-weight: 300; */
+    }
+
+    footer {
+      background: linear-gradient(-45deg, red, #00ff00, blue, yellow);
+      /* Replace with your desired gradient colors */
+      background-size: 400% 400%;
+      animation: animate 15s ease infinite;
+
+    }
+
+    .container-fluid {
+      background: linear-gradient(-45deg, red, #00ff00, blue, yellow);
+      /* Replace with your desired gradient colors */
+      background-size: 400% 400%;
+      animation: animate 15s ease infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        background-position: 0 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      0% {
+        background-position: 0 50%;
+      }
+    }
+
+    ul li a {
+      color: white;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Set the height of the div as needed */
+    }
+
+    h1 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    h1:before,
+    h1:after {
+      content: "";
+      flex: 1 1;
+      border-bottom: 1px solid;
+      margin: auto;
+    }
+
+    h1:before {
+      margin-right: 10px
+    }
+
+    h1:after {
+      margin-left: 10px
+    }
+
+    form {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style the labels */
+    label {
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Style the input and textarea */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    /* Style the submit button */
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Hover effect for the submit button */
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .b {
+      padding-right: 10px;
+      border-radius: 40px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Animation for card appearance */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 2;
+        transform: translateY(0);
+      }
+    }
+
+    /* Apply animation to the cards */
+    .card-animation {
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    @media (max-width: 576px) {
+      .myimg {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .font-size-sm-10 {
+        font-size: 10px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .font-size-md-12 {
+        font-size: 12px;
+      }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .font-size-lg-15 {
+        font-size: 15px;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .font-size-xl-16 {
+        font-size: 16px;
+      }
+    }
+  </style>
+  <script>
+    function closeNavbar() {
+      var navbar = document.getElementById('navbarSupportedContent');
+      if (navbar.classList.contains('show')) {
+        navbar.classList.remove('show');
+      }
+    }
+
+    function toggleNavbar() {
+      closeNavbar(); // Close navbar when the toggle button is clicked
+    }
+
+
+
+  </script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand text-white display-1" href="#">
+          <h5><i>Burhan Ul Din</i></h5>
+        </a>
+        <button class="navbar-toggler  bg-white text-dark" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation" onclick="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="closeNavbar()"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" onclick="closeNavbar()"><strong>Projects</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills" onclick="closeNavbar()"><strong>Skills</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" onclick="closeNavbar()"><strong>Contact Us</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container pb-5">
+      <div class="row text">
+        <div class="col-md-7 col-lg-7 col-sm-12 pr-sm-1 pl-sm-1">
+          <h5
+            class="display-3 pt-3 text-danger text-md-left pb-4 font-size-6 font-size-sm-7 font-size-md-8 font-size-lg-9 font-size-xl-10">
+            <b> Hi, I am Burhan
+              I'm Django Developer</b>
+          </h5>
+          <div>
+            <p class="pt-2 pr-2 text-white font-size-sm-10 font-size-md-12 font-size-lg-15 font-size-xl-16" style="">
+              I am an IT student and I primarily focus on enhancing my skills. My main area of interest lies in
+              programming,
+              as I aspire to become a proficient programmer in the future. I dedicate a significant amount of my time to
+              learning programming, particularly aiming to excel as a Django developer. I have familiarized myself with
+              the
+              fundamentals of programming by learning languages such as Python, along with concepts like Object-Oriented
+              Programming, data structures, and algorithms. Currently, I am engaged in a project involving Django,
+              wherein
+              I am developing a website integrated with a database. Additionally, I am actively learning Django and
+              exploring related technologies like DRF and web scraping using Beautiful Soup. My ultimate goal is to work
+              in a
+              professional setting, preferably in a team, where I can further develop my skills as a Python Django
+              developer.
+            </p>
+          </div>
+
+          <div class="row pt-3">
+            <div class="container">
+              <a href="mycv.pdf" class="btn p-2 btn-sm btn-outline-success btn-info text-white "
+                style="border-radius:50px"> View Resume</a>
+              <a href="https://github.com/burhangi" class="btn p-2 btn-sm btn-outline-success btn-info text-white "
+                style="border-radius:50px">
+                View Github</a>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <div class="col-md-5 pt-2 col-sm-12 text-center mx-auto p-sm-1">
+          <img src="img/my2.jpeg" class="myimg d-block img-fluid pt-3"
+            style="max-width: 100%; height: auto; border-radius: 50%;" alt="Your Image">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
+
+
+  </div>
+
+  <div class="container" style="font-size: 14px;">
+    <div class="row pb-4">
+      <h1 class="pt-5 pb-5" id="projects">PROJECTS</h1>
+      <div class="col-sm-6 col-md-4 pt-2">
+        <div class="card" style="width: 100%;" data-aos="zoom-in" data-aos-duration="1500">
+          <img src="img/eshop1.png" class="card-img-top" alt="Random Coding Image" style="height:200px;width:100%">
+          <div class="card-body">
+            <h5 class="card-title">Ecomerse Website</h5>
+            <p class="card-text">I have created my e-commerce website with Django using HTML, CSS, Bootstrap, and
+              JavaScript. After completing my e-commerce website, I have learned a lot of things. This e-commerce
+              website has improved my skills as a Django developer.</p>
+            <a href="https://github.com/burhangi/Django-EShop-website.git" class="btn btn-primary">Check it</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 pt-2">
+        <div class="card" style="width: 100%;">
+          <img src="img/blogpic.png" class="card-img-top" alt="Random Coding Image" style="height:200px;width:100%">
+          <div class="card-body">
+            <h5 class="card-title">Blog Website</h5>
+            <p class="card-text"> I have created a blog website using HTML, CSS, Bootstrap, and JavaScript. This blog
+              website has improved my frontend skills and my responsiveness skills as a frontend developer. Here, I have
+              implemented some scroll animations in cards.So cards look Beautiful</p>
+            <a href="https://fanciful-cranachan-19c346.netlify.app" class="btn btn-primary">Check it</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 pt-2">
+        <div class="card" style="width: 100%;">
+          <img src="img/blog2.png" class="card-img-top" alt="Random Coding Image" style="height:200px;width:100%">
+          <div class="card-body">
+            <h5 class="card-title">Simple blog </h5>
+            <p class="card-text">I have created a simple blog website for practice using HTML, CSS, Bootstrap, and
+              JavaScript. This blog website has improved my frontend skills and my responsiveness skills as a frontend
+              developer. Here, I have worked on it as a practice website.</p>
+            <a href="https://roaring-cascaron-792e68.netlify.app" class="btn btn-primary">Check it </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-6 col-md-4 pt-2">
+        <div class="card" style="width: 100%;">
+          <img src="img/myport.png" class="card-img-top" alt="Random Coding Image" style="height:200px;width:100%">
+          <div class="card-body">
+            <h5 class="card-title">My Portfolio</h5>
+            <p class="card-text">I have created my personal portfolio website to showcase my skills, areas of interest,
+              and projects. I have created it using HTML, CSS, Bootstrap, and JavaScript. I want to learn more in the
+              future to pursue my dream job.  So, I hope that Allah helps me. </p>
+            <a href="#" class="btn btn-primary">Check it</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 pt-2">
+        <div class="card" style="width: 100%;">
+          <img src="img/desktopapp.jpeg" class="card-img-top" alt="Random Coding Image" style="height:200px;width:100%">
+          <div class="card-body">
+            <h5 class="card-title">Desktop App</h5>
+            <p class="card-text">I created a Desktop App for a Blood Bank Management system using C#. In this app, I
+              learned backend concepts such as CRUD operations and SQL. This project significantly enhanced my
+              programming skills. However, I haven't deployed this app on GitHub </p>
+            <a href="#" class="btn btn-primary">Check it</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 pt-2">
+        <div class="card" style="width: 100%;">
+          <img src="img/2desktop.png" class="card-img-top" alt="Random Coding Image" style="height:200px;width:100%">
+          <div class="card-body">
+            <h5 class="card-title">C# Desktop App</h5>
+            <p class="card-text">I created another Desktop App for a Blood Bank using C#. In this app, I
+              learned backend concepts such as CRUD operations and SQL. This project significantly enhanced my
+              programming skills. However, I haven't deployed this app on GitHub </p>
+            <a href="#" class="btn btn-primary">Check it</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <h1 class="pt-5 pb-2" id="skills">SKILLS</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col">
+          <h4 class="p-1" style="font-size: 18px;">HTML5</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-danger" role="progressbar" aria-label="Success example" style="width: 80%">80%
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4 class="p-1" style="font-size: 18px;" style="font-size: 18px;">CSS3</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-info text-dark" role="progressbar" aria-label="Info example" style="width: 70%">
+              70%</div>
+          </div>
+        </div>
+
+
+
+        <div class="col">
+          <h4 class="p-1" style="font-size: 18px;">Bootstrap5</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-dark" role="progressbar" aria-label="Danger example" style="width: 80%">80%
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4 class="p-1" style="font-size: 18px;">JavaScript</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-primary" role="progressbar" aria-label="Danger example" style="width: 60%">60%
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+      <div class="col-md-6">
+        <div class="col">
+          <h4 class="p-1" style="font-size: 18px;">Git/GitHub</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-success" role="progressbar" aria-label="Danger example" style="width: 80%">80%
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4 class="p-1" style="font-size: 18px;">Python</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-info" role="progressbar" aria-label="Danger example" style="width: 70%">70%
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h4 class="p-1 " style="font-size: 18px;">Django</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-warning" role="progressbar" aria-label="Danger example" style="width: 80%">80%
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4 class="p-1" style="font-size: 18px;">Web Scrapping</h4>
+          <div class="progress col-12">
+            <div class="progress-bar bg-secondary" role="progressbar" aria-label="Danger example" style="width: 50%">50%
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  </div>
+  <div class="container" style="font-size: 16px;">
+    <h1 class="pt-5 pb-2" id="contact">CONTACT ME</h1>
+    <form action="https://formcarry.com/s/SXxm7G4ZHE" method="POST" id="myForm" onsubmit="validateForm(event)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" name="text" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+      <div class="fomr-group">
+        <label for="fileInput">Select a file:</label>
+        <input type="file" id="fileInput" name="fileInput">
+      </div><br>
+      <button type="submit" class="btn btn-primary form-control" value="Submit">Submit</button>
+    </form>
+  </div>
+  </div>
+
+
+
+
+
+  <footer class="footer  text-white py-4 pt-2 mt-4 style=" style="font-size: 14px">
+    <div class="container  pt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>About Me</h4>
+          <p>I am Burhan ul Din. I am a student of IT. I want to become a full-stack developer in the future. When I
+            become a good full-stack developer, I want to open a software house and teach programming to the children of
+            poor men for free. I want to help humanity in my life. I want to share my knowledge with those students who
+            are unable to study in universities due to financial constraints. So, I hope that Allah helps me.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h4>Contact</h4>
+          <ul class="list-unstyled">
+            <li>Phone:03100602017 </li>
+            <li>Email: burhanuldin077@gmail.com</li>
+            <li>Address:Pakistan,punjab ,Taunsa Sharif</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
